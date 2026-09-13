@@ -1,4 +1,4 @@
-# Clever Lead Pipeline — Field Dictionary & Taxonomy
+# Clever Lead Pipeline - Field Dictionary & Taxonomy
 
 **Scope:** `leads.csv` (206 rows) and `outreach_log.csv` (379 rows), covering leads received 4–17 May 2026 (14 days).
 **Purpose:** Establish one shared vocabulary for what a lead is, what happened to it, and how we measure it, before anyone argues about whose system is broken.
