@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Clever Lead Ledger</title>
+  <style>
+    body { margin: 0; font-family: system-ui, -apple-system, sans-serif; color: #1a1a1a; }
+    header { padding: 14px 24px; border-bottom: 1px solid #e5e5e5; }
+    header h1 { margin: 0; font-size: 18px; }
+    header p  { margin: 4px 0 0; font-size: 13px; color: #666; }
+    #dashboard iframe { width: 100%; height: calc(100vh - 70px); border: 0; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Clever Lead Lifecycle Ledger</h1>
+    <p>Prototype on the fictionalized extract: 206 leads, 379 outreach attempts, received 4-17 May 2026. Built by Joshua Agbabiaka.</p>
+  </header>
+  <div id="dashboard"></div>
+
+  <script src="https://unpkg.com/@preset-sdk/embedded"></script>
+  <script>
+    presetSdk.embedDashboard({
+      id: "PASTE_EMBEDDED_DASHBOARD_ID",                        // from the dashboard's Embed dialog
+      supersetDomain: "https://e4e965ae.us2a.app.preset.io",     // your workspace domain (already filled in)
+      mountPoint: document.getElementById("dashboard"),
+      fetchGuestToken: async () => {
+        const res = await fetch("/api/guest-token");
+        const { token, error } = await res.json();
+        if (error) throw new Error(error);
+        return token;
+      },
+      dashboardUiConfig: { hideTitle: true, filters: { expanded: false } },
+      referrerPolicy: "strict-origin-when-cross-origin",
+      iframeTitle: "Clever Lead Ledger dashboard",
+    });
+  </script>
+</body>
+</html>
