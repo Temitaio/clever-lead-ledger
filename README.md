@@ -10,7 +10,7 @@ Joshua Agbabiaka · September 2026
 | | What it is | Link |
 |---|---|---|
 | **1** | **The proposal** (4 pages, PDF) | *[Google Drive link]* |
-| **2** | **The working prototype** — live lead ledger dashboard | *[Vercel link]* |
+| **2** | **The working prototype** — live lead ledger dashboard | (https://clever-lead-ledger.vercel.app/) |
 | **3** | **This repository** — diagrams, taxonomy, SQL, and the code behind the dashboard | you are here |
 
 The proposal is also in this repo under [`/proposal`](./proposal) if the Drive link gives you trouble.
